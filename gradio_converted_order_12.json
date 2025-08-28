@@ -1,0 +1,2102 @@
+[
+  {
+    "pre_convert": {
+      "id": 0,
+      "mixed": "電線管 VE70 露出 | ",
+      "quantity": 6.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "VE70硬質ビニル電線管(4m)ベージュ",
+          "product_code": "VE70J4",
+          "score": 0.941831946
+        },
+        {
+          "master_id": 10002,
+          "product_name": "VE22硬質ビニル電線管(4m)ベージュ",
+          "product_code": "VE22J4",
+          "score": 0.906399131
+        },
+        {
+          "master_id": 10003,
+          "product_name": "硬質ビニル電線管100ベージュ4m",
+          "product_code": "VE100J4",
+          "score": 0.862231314
+        }
+      ],
+      "quantity": 6.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 1,
+      "mixed": "ﾉｰﾏﾙﾍﾞﾝﾄﾞ VE70 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "VE70用ビニールブッシング",
+          "product_code": "B70J",
+          "score": 0.62471652
+        },
+        {
+          "master_id": 10002,
+          "product_name": "ノーマルベンドVE70(ベージュ)",
+          "product_code": "#N70J",
+          "score": 0.618933499
+        },
+        {
+          "master_id": 10003,
+          "product_name": "ノーマルベンドVE70(ベージュ)",
+          "product_code": "#N70J",
+          "score": 0.550334096
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 2,
+      "mixed": "ﾌﾞｯｼﾝｸﾞ VE70 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "VE70用ビニールブッシング",
+          "product_code": "B70J",
+          "score": 0.642968714
+        },
+        {
+          "master_id": 10002,
+          "product_name": "ノーマルベンドVE70(ベージュ)",
+          "product_code": "#N70J",
+          "score": 0.631274
+        },
+        {
+          "master_id": 10003,
+          "product_name": "ノーマルベンドVE70(ベージュ)",
+          "product_code": "#N70J",
+          "score": 0.571226656
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 3,
+      "mixed": "異種管接続材 VE70  FEP80 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "コンビネーションカップリング",
+          "product_code": "FEVE80DB",
+          "score": 0.948133469
+        },
+        {
+          "master_id": 10002,
+          "product_name": "コンビネーションカップリング",
+          "product_code": "FEVE80B",
+          "score": 0.917827845
+        },
+        {
+          "master_id": 10003,
+          "product_name": "コンビネーションカップリング",
+          "product_code": "FEGP80DB",
+          "score": 0.915255785
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 4,
+      "mixed": "ｹｰﾌﾞﾙ 6kV CVT38mm2  管内 | ",
+      "quantity": 18.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "6KVケーブル CVT38X3C",
+          "product_code": "6KCVT38",
+          "score": 0.689809859
+        },
+        {
+          "master_id": 10002,
+          "product_name": "6KVケーブル CVT38X3C",
+          "product_code": "6KCVT38",
+          "score": 0.678670347
+        },
+        {
+          "master_id": 10003,
+          "product_name": "6KVケーブル CVT38X3C",
+          "product_code": "6KCVT38",
+          "score": 0.671657324
+        }
+      ],
+      "quantity": 18.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 5,
+      "mixed": "端末処理材 38mm2 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "6k端末ハイーKタームCET38・60",
+          "product_code": "#92E732JEM",
+          "score": 0.779468536
+        },
+        {
+          "master_id": 10002,
+          "product_name": "6k端末ハイーKタームCET38・60",
+          "product_code": "#92E732JNEM",
+          "score": 0.742725074
+        },
+        {
+          "master_id": 10003,
+          "product_name": "6k端末ハイーKタームCET38・60",
+          "product_code": "#92E732JEM",
+          "score": 0.738338351
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 6,
+      "mixed": "端末処理材 38mm2 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "6k端末ハイーKタームCET38・60",
+          "product_code": "#92E732JEM",
+          "score": 0.779552162
+        },
+        {
+          "master_id": 10002,
+          "product_name": "6k端末ハイーKタームCET38・60",
+          "product_code": "#92E732JNEM",
+          "score": 0.742688179
+        },
+        {
+          "master_id": 10003,
+          "product_name": "6k端末ハイーKタームCET38・60",
+          "product_code": "#92E732JEM",
+          "score": 0.738438129
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 7,
+      "mixed": "電線 IV 38mm2x1  管内 | ",
+      "quantity": 20.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600V IV38 赤・白・黒・青・緑",
+          "product_code": "IV38",
+          "score": 0.887054324
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600V IV22 赤・白・黒・青・緑",
+          "product_code": "IV22",
+          "score": 0.838964581
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600V IV5.5 赤・白・黒・青・緑",
+          "product_code": "IV55",
+          "score": 0.838758469
+        }
+      ],
+      "quantity": 20.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 8,
+      "mixed": "電線 IV 14mm2x1  管内 | ",
+      "quantity": 20.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600V IV14 赤・白・黒・青・緑",
+          "product_code": "IV14",
+          "score": 0.885519803
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600V IV5.5 赤・白・黒・青・緑",
+          "product_code": "IV55",
+          "score": 0.836213112
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600V IV22 赤・白・黒・青・緑",
+          "product_code": "IV22",
+          "score": 0.835980535
+        }
+      ],
+      "quantity": 20.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 9,
+      "mixed": "電線 IV 5.5mm2x1  管内 | ",
+      "quantity": 20.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600V IV5.5 赤・白・黒・青・緑",
+          "product_code": "IV55",
+          "score": 0.879408956
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600V IV2.0 赤・白・黒・青・緑",
+          "product_code": "IV20",
+          "score": 0.83263433
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600V IV14 赤・白・黒・青・緑",
+          "product_code": "IV14",
+          "score": 0.829197705
+        }
+      ],
+      "quantity": 20.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 10,
+      "mixed": "打込式接地棒(単独) 14mmφx1500 | ",
+      "quantity": 45.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "14φリード端子 22sq×275",
+          "product_code": "14R",
+          "score": 0.914677382
+        },
+        {
+          "master_id": 10002,
+          "product_name": "連結式アース棒14φ×1500 本体",
+          "product_code": "14A",
+          "score": 0.914677382
+        },
+        {
+          "master_id": 10003,
+          "product_name": "連結式アース棒14φ×1500 本体",
+          "product_code": "14A",
+          "score": 0.711566269
+        }
+      ],
+      "quantity": 45.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 11,
+      "mixed": "ｺﾝｸﾘｰﾄﾎﾟｰﾙ 12m 根枷､ﾊﾞﾝﾄﾞ共 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "14φリード端子 22sq×275",
+          "product_code": "14R",
+          "score": 0.42193523
+        },
+        {
+          "master_id": 10002,
+          "product_name": "PF管 MFS-16(50m巻)*一重波",
+          "product_code": "MFS16",
+          "score": 0.404114664
+        },
+        {
+          "master_id": 10003,
+          "product_name": "PF管 MFS-16(50m巻)*一重波",
+          "product_code": "MFS16",
+          "score": 0.399252057
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 12,
+      "mixed": "高圧気中開閉器 方向性 7.2Kv 200A | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "ニューパット100",
+          "product_code": "NPAT11T",
+          "score": 0.599359453
+        },
+        {
+          "master_id": 10002,
+          "product_name": "6k端末ハイーKタームCET38・60",
+          "product_code": "#92E732JNEM",
+          "score": 0.598069906
+        },
+        {
+          "master_id": 10003,
+          "product_name": "ケースBr 防雨NCD-30 3P30A",
+          "product_code": "BCD33071K",
+          "score": 0.585669875
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 13,
+      "mixed": "ｹｰﾌﾞﾙ 6kV CVT200mm2  FEP管内 | ",
+      "quantity": 15.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "6KVケーブル CVT200X3C",
+          "product_code": "6KCVT200",
+          "score": 0.813683093
+        },
+        {
+          "master_id": 10002,
+          "product_name": "6KVケーブル CVT150X3C",
+          "product_code": "6KCVT150",
+          "score": 0.797704697
+        },
+        {
+          "master_id": 10003,
+          "product_name": "6KVケーブル CVT38X3C",
+          "product_code": "6KCVT38",
+          "score": 0.717373
+        }
+      ],
+      "quantity": 15.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 14,
+      "mixed": "ｹｰﾌﾞﾙ 6kV CVT150mm2  FEP管内 | ",
+      "quantity": 30.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "6KVケーブル CVT150X3C",
+          "product_code": "6KCVT150",
+          "score": 0.801279604
+        },
+        {
+          "master_id": 10002,
+          "product_name": "6KVケーブル CVT200X3C",
+          "product_code": "6KCVT200",
+          "score": 0.781616747
+        },
+        {
+          "master_id": 10003,
+          "product_name": "6KVケーブル CVT38X3C",
+          "product_code": "6KCVT38",
+          "score": 0.707813799
+        }
+      ],
+      "quantity": 30.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 15,
+      "mixed": "ｹｰﾌﾞﾙ 6kV CVT200mm2  ｹｰﾌﾞﾙﾗｯｸ | ",
+      "quantity": 35.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "6KVケーブル CVT60X3C",
+          "product_code": "6KCVT60",
+          "score": 0.675549567
+        },
+        {
+          "master_id": 10002,
+          "product_name": "ケーブル",
+          "product_code": "6KVCVT38",
+          "score": 0.642042935
+        },
+        {
+          "master_id": 10003,
+          "product_name": "裸圧着スリーブ(突合せ用B型)150",
+          "product_code": "B150",
+          "score": 0.63720113
+        }
+      ],
+      "quantity": 35.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 16,
+      "mixed": "ｹｰﾌﾞﾙ 6kV CVT150mm2  ｹｰﾌﾞﾙﾗｯｸ | ",
+      "quantity": 70.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "裸圧着スリーブ(突合せ用B型)150",
+          "product_code": "B150",
+          "score": 0.652761698
+        },
+        {
+          "master_id": 10002,
+          "product_name": "6KVケーブル CVT60X3C",
+          "product_code": "6KCVT60",
+          "score": 0.651578486
+        },
+        {
+          "master_id": 10003,
+          "product_name": "ケーブル",
+          "product_code": "6KVCVT38",
+          "score": 0.614627242
+        }
+      ],
+      "quantity": 70.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 17,
+      "mixed": "ｹｰﾌﾞﾙ 600V CVT 38mm2  ｹｰﾌﾞﾙﾗｯｸ | ",
+      "quantity": 78.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "裸圧着スリーブ(突合せ用B型)150",
+          "product_code": "B150",
+          "score": 0.674994409
+        },
+        {
+          "master_id": 10002,
+          "product_name": "ケーブル",
+          "product_code": "6KVCVT38",
+          "score": 0.611273825
+        },
+        {
+          "master_id": 10003,
+          "product_name": "6KVケーブル CVT38X3C",
+          "product_code": "6KCVT38",
+          "score": 0.606239796
+        }
+      ],
+      "quantity": 78.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 18,
+      "mixed": "ｹｰﾌﾞﾙ 600V CVT 22mm2  ｹｰﾌﾞﾙﾗｯｸ | ",
+      "quantity": 78.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600Vケーブル CVT22X3C",
+          "product_code": "CVT22",
+          "score": 0.61041224
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600Vケーブル CVT22X3C",
+          "product_code": "CVT22",
+          "score": 0.601985931
+        },
+        {
+          "master_id": 10003,
+          "product_name": "裸圧着スリーブ(突合せ用B型)150",
+          "product_code": "B150",
+          "score": 0.657534242
+        }
+      ],
+      "quantity": 78.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 19,
+      "mixed": "ｹｰﾌﾞﾙ 600V CVT 14mm2  ｹｰﾌﾞﾙﾗｯｸ | ",
+      "quantity": 465.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "裸圧着スリーブ(突合せ用B型)150",
+          "product_code": "B150",
+          "score": 0.645659
+        },
+        {
+          "master_id": 10002,
+          "product_name": "ケーブル",
+          "product_code": "VVF162",
+          "score": 0.622244895
+        },
+        {
+          "master_id": 10003,
+          "product_name": "ケーブル",
+          "product_code": "VVF163",
+          "score": 0.617088497
+        }
+      ],
+      "quantity": 465.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 20,
+      "mixed": "ｹｰﾌﾞﾙ CV 8mm2-3C  ｹｰﾌﾞﾙﾗｯｸ | ",
+      "quantity": 135.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600Vケーブル CV 8X3C",
+          "product_code": "CV83",
+          "score": 0.647688687
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600Vケーブル CV 8X2C",
+          "product_code": "CV82",
+          "score": 0.643648624
+        },
+        {
+          "master_id": 10003,
+          "product_name": "EMケーブルCE8X3C",
+          "product_code": "EMCE83",
+          "score": 0.638526142
+        }
+      ],
+      "quantity": 135.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 21,
+      "mixed": "ｹｰﾌﾞﾙ CV 5.5mm2-4C  ｹｰﾌﾞﾙﾗｯｸ | ",
+      "quantity": 225.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600Vケーブル CV5.5X3C",
+          "product_code": "CV553",
+          "score": 0.688002169
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600Vケーブル CV5.5X3C",
+          "product_code": "CV553",
+          "score": 0.682709157
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600Vケーブル CV5.5X4C",
+          "product_code": "CV554",
+          "score": 0.670080721
+        }
+      ],
+      "quantity": 225.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 22,
+      "mixed": "電線 IV 22mm2x1  管内 | ",
+      "quantity": 50.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600V IV22 赤・白・黒・青・緑",
+          "product_code": "IV22",
+          "score": 0.886925757
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600V IV5.5 赤・白・黒・青・緑",
+          "product_code": "IV55",
+          "score": 0.848400772
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600V IV14 赤・白・黒・青・緑",
+          "product_code": "IV14",
+          "score": 0.845665932
+        }
+      ],
+      "quantity": 50.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 23,
+      "mixed": "電線 IV 14mm2x1  管内 | ",
+      "quantity": 120.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600V IV14 赤・白・黒・青・緑",
+          "product_code": "IV14",
+          "score": 0.885519803
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600V IV5.5 赤・白・黒・青・緑",
+          "product_code": "IV55",
+          "score": 0.836213112
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600V IV22 赤・白・黒・青・緑",
+          "product_code": "IV22",
+          "score": 0.835980535
+        }
+      ],
+      "quantity": 120.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 24,
+      "mixed": "電線 IV 5.5mm2x1  管内 | ",
+      "quantity": 100.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600V IV5.5 赤・白・黒・青・緑",
+          "product_code": "IV55",
+          "score": 0.879408956
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600V IV2.0 赤・白・黒・青・緑",
+          "product_code": "IV20",
+          "score": 0.83263433
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600V IV14 赤・白・黒・青・緑",
+          "product_code": "IV14",
+          "score": 0.829197705
+        }
+      ],
+      "quantity": 100.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 25,
+      "mixed": "電線 IV 2.0mmx1  管内 | ",
+      "quantity": 100.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600V IV2.0 赤・白・黒・青・緑",
+          "product_code": "IV20",
+          "score": 0.879160583
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600V IV5.5 赤・白・黒・青・緑",
+          "product_code": "IV55",
+          "score": 0.827885032
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600V IV22 赤・白・黒・青・緑",
+          "product_code": "IV22",
+          "score": 0.81008786
+        }
+      ],
+      "quantity": 100.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 26,
+      "mixed": "壁面ﾀﾞｸﾄ(ｽｰﾊﾟｰﾀﾞｲﾏ) 600x1400x300 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "タフロック60",
+          "product_code": "TAFTB012",
+          "score": 0.56975764
+        },
+        {
+          "master_id": 10002,
+          "product_name": "メーター用木板 300×20",
+          "product_code": "MMB300",
+          "score": 0.556180239
+        },
+        {
+          "master_id": 10003,
+          "product_name": "タイカブラックBKセット",
+          "product_code": "MTKSBK014",
+          "score": 0.55304122
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 27,
+      "mixed": "ｹｰﾌﾞﾙ CV 5.5mm2-3C  管内 | ",
+      "quantity": 60.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600Vケーブル CV5.5X3C",
+          "product_code": "CV553",
+          "score": 0.769063
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600Vケーブル CV5.5X4C",
+          "product_code": "CV554",
+          "score": 0.73236227
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600Vケーブル CV3.5X3C",
+          "product_code": "CV353",
+          "score": 0.73099488
+        }
+      ],
+      "quantity": 60.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 28,
+      "mixed": "ｹｰﾌﾞﾙ CV 3.5mm2-3C  管内 | ",
+      "quantity": 30.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600Vケーブル CV3.5X3C",
+          "product_code": "CV353",
+          "score": 0.762791753
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600Vケーブル CV5.5X3C",
+          "product_code": "CV553",
+          "score": 0.735973537
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600Vケーブル CV3.5X4C",
+          "product_code": "CV354",
+          "score": 0.715701044
+        }
+      ],
+      "quantity": 30.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 29,
+      "mixed": "ｹｰﾌﾞﾙ CV 5.5mm2-3C  ｹｰﾌﾞﾙﾗｯｸ | ",
+      "quantity": 160.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600Vケーブル CV5.5X3C",
+          "product_code": "CV553",
+          "score": 0.69777447
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600Vケーブル CV5.5X3C",
+          "product_code": "CV553",
+          "score": 0.695862293
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600Vケーブル CV5.5X3C",
+          "product_code": "CV553",
+          "score": 0.695862293
+        }
+      ],
+      "quantity": 160.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 30,
+      "mixed": "ｹｰﾌﾞﾙ CV 3.5mm2-3C  ｹｰﾌﾞﾙﾗｯｸ | ",
+      "quantity": 80.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600Vケーブル CV3.5X3C",
+          "product_code": "CV353",
+          "score": 0.705300808
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600Vケーブル CV3.5X3C",
+          "product_code": "CV353",
+          "score": 0.700579405
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600Vケーブル CV3.5X2C",
+          "product_code": "CV352",
+          "score": 0.684792697
+        }
+      ],
+      "quantity": 80.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 31,
+      "mixed": "ｹｰﾌﾞﾙ VVF 1.6-2C  ﾋﾟｯﾄ･ﾄﾗﾌ･天井内 | ",
+      "quantity": 515.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "Fケーブル 1.6×2C",
+          "product_code": "YF162",
+          "score": 0.698075354
+        },
+        {
+          "master_id": 10002,
+          "product_name": "Fケーブル 1.6×3C",
+          "product_code": "YF163",
+          "score": 0.677539
+        },
+        {
+          "master_id": 10003,
+          "product_name": "Fケーブル 2.0×2C",
+          "product_code": "YF202",
+          "score": 0.66827786
+        }
+      ],
+      "quantity": 515.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 32,
+      "mixed": "ｹｰﾌﾞﾙ VVF 2.0-2C  ﾋﾟｯﾄ･ﾄﾗﾌ･天井内 | ",
+      "quantity": 1580.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "Fケーブル 2.0×2C",
+          "product_code": "YF202",
+          "score": 0.743185818
+        },
+        {
+          "master_id": 10002,
+          "product_name": "Fケーブル 2.0×3C",
+          "product_code": "YF203",
+          "score": 0.722398102
+        },
+        {
+          "master_id": 10003,
+          "product_name": "Fケーブル 1.6×2C",
+          "product_code": "YF162",
+          "score": 0.706572771
+        }
+      ],
+      "quantity": 1580.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 33,
+      "mixed": "ｹｰﾌﾞﾙ VVF 1.6-3C  ﾋﾟｯﾄ･ﾄﾗﾌ･天井内 | ",
+      "quantity": 1320.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "Fケーブル 1.6×3C",
+          "product_code": "YF163",
+          "score": 0.696101069
+        },
+        {
+          "master_id": 10002,
+          "product_name": "Fケーブル 1.6×2C",
+          "product_code": "YF162",
+          "score": 0.69461453
+        },
+        {
+          "master_id": 10003,
+          "product_name": "Fケーブル 2.0×3C",
+          "product_code": "YF203",
+          "score": 0.660753965
+        }
+      ],
+      "quantity": 1320.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 34,
+      "mixed": "ｹｰﾌﾞﾙ VVF 2.0-3C  ﾋﾟｯﾄ･ﾄﾗﾌ･天井内 | ",
+      "quantity": 1325.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "Fケーブル 2.0×3C",
+          "product_code": "YF203",
+          "score": 0.741465807
+        },
+        {
+          "master_id": 10002,
+          "product_name": "Fケーブル 2.0×2C",
+          "product_code": "YF202",
+          "score": 0.736285031
+        },
+        {
+          "master_id": 10003,
+          "product_name": "Fケーブル 1.6×2C",
+          "product_code": "YF162",
+          "score": 0.708566427
+        }
+      ],
+      "quantity": 1325.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 35,
+      "mixed": "ｹｰﾌﾞﾙ VCT 2mm2-3C  露出 | ",
+      "quantity": 30.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600V VCT 2×3C",
+          "product_code": "VCT23",
+          "score": 0.786681294
+        },
+        {
+          "master_id": 10002,
+          "product_name": "Fケーブル2.0X3C",
+          "product_code": "YF203",
+          "score": 0.700716615
+        },
+        {
+          "master_id": 10003,
+          "product_name": "Fケーブル2.0X2C",
+          "product_code": "YF202",
+          "score": 0.693793595
+        }
+      ],
+      "quantity": 30.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 36,
+      "mixed": "埋込ｽｲｯﾁ 1P15Ax1 | ",
+      "quantity": 4.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "フルカラー埋込スイッチB",
+          "product_code": "#WN5001",
+          "score": 0.752107143
+        },
+        {
+          "master_id": 10002,
+          "product_name": "フルカラー新金属プレート1コ用",
+          "product_code": "#WN7501",
+          "score": 0.752107143
+        },
+        {
+          "master_id": 10003,
+          "product_name": "フルカラー取付枠",
+          "product_code": "#WN3700",
+          "score": 0.752107143
+        }
+      ],
+      "quantity": 4.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 37,
+      "mixed": "埋込ｽｲｯﾁ PLx1 | ",
+      "quantity": 4.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "フルカラー新金属プレート1コ用",
+          "product_code": "#WN7501",
+          "score": 0.641133249
+        },
+        {
+          "master_id": 10002,
+          "product_name": "フルカラー取付枠",
+          "product_code": "#WN3700",
+          "score": 0.641133249
+        },
+        {
+          "master_id": 10003,
+          "product_name": "フルカラー埋込パイロットスイッチB",
+          "product_code": "#WN5241",
+          "score": 0.641133249
+        }
+      ],
+      "quantity": 4.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 38,
+      "mixed": "埋込ｺﾝｾﾝﾄ(大角形) 2P15Ax1 | ",
+      "quantity": 2.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "フルカラー埋込スイッチB",
+          "product_code": "WN5001",
+          "score": 0.740065515
+        },
+        {
+          "master_id": 10002,
+          "product_name": "フルカラーモダンプレート1コ用・W",
+          "product_code": "WN6001W",
+          "score": 0.740065515
+        },
+        {
+          "master_id": 10003,
+          "product_name": "フルカラー取付枠",
+          "product_code": "WN3700",
+          "score": 0.740065515
+        }
+      ],
+      "quantity": 2.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 39,
+      "mixed": "埋込ｺﾝｾﾝﾄ(大角形) 2P15Ax1 抜止 | ",
+      "quantity": 44.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "ヌケドメセツチダブルコン/ロシュツ",
+          "product_code": "WK3064",
+          "score": 0.7172755
+        },
+        {
+          "master_id": 10002,
+          "product_name": "フルカラーモダンプレート1コ用(ミルキ-",
+          "product_code": "#WN6001W",
+          "score": 0.71070689
+        },
+        {
+          "master_id": 10003,
+          "product_name": "フルカラー取付枠",
+          "product_code": "#WN3700",
+          "score": 0.71070689
+        }
+      ],
+      "quantity": 44.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 40,
+      "mixed": "埋込ｺﾝｾﾝﾄ(大角形) 2P15x2 | ",
+      "quantity": 3.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "フルカラー新金属プレート2コ用",
+          "product_code": "#WN7502",
+          "score": 0.726749718
+        },
+        {
+          "master_id": 10002,
+          "product_name": "フルカラー埋込スイッチB",
+          "product_code": "#WN5001",
+          "score": 0.726749718
+        },
+        {
+          "master_id": 10003,
+          "product_name": "フルカラーダブルコンセント",
+          "product_code": "#WN1302",
+          "score": 0.703233242
+        }
+      ],
+      "quantity": 3.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 41,
+      "mixed": "埋込ｺﾝｾﾝﾄ(大角形) 2P15Ax1 接地極付 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "フルカラー接地ダブルコンセント",
+          "product_code": "#WN1512K",
+          "score": 0.751500785
+        },
+        {
+          "master_id": 10002,
+          "product_name": "フルカラー新金属プレート3コ用",
+          "product_code": "#WN7503",
+          "score": 0.751404762
+        },
+        {
+          "master_id": 10003,
+          "product_name": "フルカラー取付枠",
+          "product_code": "#WN3700",
+          "score": 0.73548007
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 42,
+      "mixed": "埋込ｺﾝｾﾝﾄ(大角形) 2P15x2 抜止･接地極付 | ",
+      "quantity": 9.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "FCヌケドメセツチダブルコンセント",
+          "product_code": "#WN1162",
+          "score": 0.755102873
+        },
+        {
+          "master_id": 10002,
+          "product_name": "フルカラーモダンプレート3コ用(ミルキ-",
+          "product_code": "#WN6003W",
+          "score": 0.755102873
+        },
+        {
+          "master_id": 10003,
+          "product_name": "フルカラーモダンプレート1コ用(ミルキ-",
+          "product_code": "#WN6001W",
+          "score": 0.718536258
+        }
+      ],
+      "quantity": 9.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 43,
+      "mixed": "埋込ｺﾝｾﾝﾄ(大角形) 2P15Ax1 接地極付(WP) | ",
+      "quantity": 2.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "フルカラー防滴プレート1コ用",
+          "product_code": "#WN7901",
+          "score": 0.754316151
+        },
+        {
+          "master_id": 10002,
+          "product_name": "フルカラー取付枠",
+          "product_code": "#WN3700",
+          "score": 0.754316151
+        },
+        {
+          "master_id": 10003,
+          "product_name": "フルカラーアース付コンセント",
+          "product_code": "#WN1101",
+          "score": 0.754316151
+        }
+      ],
+      "quantity": 2.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 44,
+      "mixed": "ﾓｰﾙﾎﾞｯｸｽ 1個用 | ",
+      "quantity": 6.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "埋込スイッチボックス1個用(塗代付)",
+          "product_code": "CSW1N",
+          "score": 0.575437665
+        },
+        {
+          "master_id": 10002,
+          "product_name": "ニューFモール用BOX1個用浅型ホワイト",
+          "product_code": "MSFBA12",
+          "score": 0.563057482
+        },
+        {
+          "master_id": 10003,
+          "product_name": "1ケ用セーリスボックス",
+          "product_code": "SB1B",
+          "score": 0.555476189
+        }
+      ],
+      "quantity": 6.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 45,
+      "mixed": "ｽｲｯﾁﾎﾞｯｸｽ 標準  1個用 | ",
+      "quantity": 62.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "埋込スイッチボックス1個用(塗代付)",
+          "product_code": "CSW1N",
+          "score": 0.608217299
+        },
+        {
+          "master_id": 10002,
+          "product_name": "埋込スイッチボックス1個用(塗代付)",
+          "product_code": "CSW1N",
+          "score": 0.57532537
+        },
+        {
+          "master_id": 10003,
+          "product_name": "ニューFモール用BOX1個用浅型ホワイト",
+          "product_code": "MSFBA12",
+          "score": 0.537718713
+        }
+      ],
+      "quantity": 62.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 46,
+      "mixed": "ｼﾞｮｲﾝﾄﾎﾞｯｸｽ | ",
+      "quantity": 40.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "EMケーブルCET150X3C",
+          "product_code": "EMCET1503",
+          "score": 0.356662333
+        },
+        {
+          "master_id": 10002,
+          "product_name": "EM-IE38赤・白・黒・青・緑",
+          "product_code": "EMIE38",
+          "score": 0.353867918
+        },
+        {
+          "master_id": 10003,
+          "product_name": "EM-IE100赤・白・黒・青・緑",
+          "product_code": "EMIE100",
+          "score": 0.350969046
+        }
+      ],
+      "quantity": 40.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 47,
+      "mixed": "ﾌﾟﾙﾎﾞｯｸｽ 200x200x150  合成樹脂製 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "VEプールBOX200角×100",
+          "product_code": "#PVP2010M",
+          "score": 0.605478168
+        },
+        {
+          "master_id": 10002,
+          "product_name": "防水VEプールBOX300角×200",
+          "product_code": "PVP3020BJ",
+          "score": 0.60444212
+        },
+        {
+          "master_id": 10003,
+          "product_name": "VEプールBOX300角×200",
+          "product_code": "PVP3020J",
+          "score": 0.603761435
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 48,
+      "mixed": "ﾗｲﾃｨﾝｸﾞﾀﾞｸﾄ 直付形 | ",
+      "quantity": 6.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "コスモワイド新金属コンセントP2型2コ用",
+          "product_code": "WTF9202K",
+          "score": 0.424160153
+        },
+        {
+          "master_id": 10002,
+          "product_name": "埋込コンセント絶縁取付枠",
+          "product_code": "#WTF3710K",
+          "score": 0.424102455
+        },
+        {
+          "master_id": 10003,
+          "product_name": "ヌケドメセッチコンセント",
+          "product_code": "#WN1161SW",
+          "score": 0.424102455
+        }
+      ],
+      "quantity": 6.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 49,
+      "mixed": "ﾌｨｰﾄﾞｲﾝｷｬｯﾌﾟ | ",
+      "quantity": 4.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "エフレックス本体FEP30Φ",
+          "product_code": "FP30",
+          "score": 0.324300885
+        },
+        {
+          "master_id": 10002,
+          "product_name": "OA抜止接地タップ(4口)PL付3m",
+          "product_code": "#MR7904TJ3",
+          "score": 0.323565066
+        },
+        {
+          "master_id": 10003,
+          "product_name": "自在バンド",
+          "product_code": "IBT408",
+          "score": 0.322709441
+        }
+      ],
+      "quantity": 4.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 50,
+      "mixed": "ｴﾝﾄﾞｷｬｯﾌﾟ | ",
+      "quantity": 4.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "エフレックス本体FEP30Φ",
+          "product_code": "FP30",
+          "score": 0.338544488
+        },
+        {
+          "master_id": 10002,
+          "product_name": "ねじなしユニバーサル T E25",
+          "product_code": "DS64251",
+          "score": 0.337464482
+        },
+        {
+          "master_id": 10003,
+          "product_name": "エフレックス本体FEP30Φ",
+          "product_code": "FP30",
+          "score": 0.336746424
+        }
+      ],
+      "quantity": 4.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 51,
+      "mixed": "耐熱ｹｰﾌﾞﾙ HP 1.2mm-15P | ",
+      "quantity": 24.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "耐熱警報用電線 HP1.2X5P",
+          "product_code": "HP125P",
+          "score": 0.839729249
+        },
+        {
+          "master_id": 10002,
+          "product_name": "耐熱警報用電線 HP1.2X10P",
+          "product_code": "HP1210P",
+          "score": 0.832974494
+        },
+        {
+          "master_id": 10003,
+          "product_name": "耐熱警報用電線 HP1.2X3C",
+          "product_code": "HP123",
+          "score": 0.80836165
+        }
+      ],
+      "quantity": 24.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 52,
+      "mixed": "耐熱ｹｰﾌﾞﾙ HP 1.2mm-10P | ",
+      "quantity": 52.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "耐熱警報用電線 HP1.2X10P",
+          "product_code": "HP1210P",
+          "score": 0.89258182
+        },
+        {
+          "master_id": 10002,
+          "product_name": "耐熱警報用電線 HP1.2X5P",
+          "product_code": "HP125P",
+          "score": 0.85561347
+        },
+        {
+          "master_id": 10003,
+          "product_name": "耐熱警報用電線 HP0.9X10P",
+          "product_code": "HP0910P",
+          "score": 0.83727634
+        }
+      ],
+      "quantity": 52.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 53,
+      "mixed": "耐熱ｹｰﾌﾞﾙ HP 1.2mm-5P | ",
+      "quantity": 30.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "耐熱警報用電線 HP1.2X5P",
+          "product_code": "HP125P",
+          "score": 0.8722682
+        },
+        {
+          "master_id": 10002,
+          "product_name": "耐熱警報用電線 HP1.2X10P",
+          "product_code": "HP1210P",
+          "score": 0.848760486
+        },
+        {
+          "master_id": 10003,
+          "product_name": "耐熱警報用電線 HP1.2X3C",
+          "product_code": "HP123",
+          "score": 0.840707064
+        }
+      ],
+      "quantity": 30.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 54,
+      "mixed": "ｹｰﾌﾞﾙ AE 0.9mm-4C | ",
+      "quantity": 680.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "警報用電線 AE0.9X4C",
+          "product_code": "AE094",
+          "score": 0.723437965
+        },
+        {
+          "master_id": 10002,
+          "product_name": "警報用電線 AE0.9X2C",
+          "product_code": "AE092",
+          "score": 0.697255194
+        },
+        {
+          "master_id": 10003,
+          "product_name": "警報用電線 AE0.9X4C",
+          "product_code": "AE094",
+          "score": 0.694049776
+        }
+      ],
+      "quantity": 680.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 55,
+      "mixed": "ﾎﾞﾀﾝ電話ｹｰﾌﾞﾙ(ﾂｲｽﾄﾍﾟｱｹｰﾌﾞﾙ) 0.5mm-4P | ",
+      "quantity": 225.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "EM-EBT 0.4×2P",
+          "product_code": "EMEBT042P",
+          "score": 0.628429115
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600V IV線 2.0 ミリ(緑)",
+          "product_code": "IV20G",
+          "score": 0.624625206
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600V IV2.0 赤・白・黒・青・緑",
+          "product_code": "IV20",
+          "score": 0.585650802
+        }
+      ],
+      "quantity": 225.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 56,
+      "mixed": "ｹｰﾌﾞﾙ AE 0.9mm-2C  ｹｰﾌﾞﾙﾗｯｸ | ",
+      "quantity": 50.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "警報用電線 AE0.9X2C",
+          "product_code": "AE092",
+          "score": 0.703442574
+        },
+        {
+          "master_id": 10002,
+          "product_name": "警報用電線 AE0.9X2C",
+          "product_code": "AE092",
+          "score": 0.67178607
+        },
+        {
+          "master_id": 10003,
+          "product_name": "警報用電線 AE0.9X4C",
+          "product_code": "AE094",
+          "score": 0.671548188
+        }
+      ],
+      "quantity": 50.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 57,
+      "mixed": "合成樹脂製可とう電線管 PF-22  露出 | ",
+      "quantity": 150.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "PF管 MFS-22(50m巻)*一重波",
+          "product_code": "MFS22",
+          "score": 0.965097964
+        },
+        {
+          "master_id": 10002,
+          "product_name": "PF管 MFS-28(30m巻)*一重波",
+          "product_code": "MFS28",
+          "score": 0.90652138
+        },
+        {
+          "master_id": 10003,
+          "product_name": "PF管 MFS-22(50m巻)*一重波",
+          "product_code": "MFS22",
+          "score": 0.902968526
+        }
+      ],
+      "quantity": 150.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 58,
+      "mixed": "ﾌﾞﾗﾝｸﾌﾟﾚｰﾄ 角形 | ",
+      "quantity": 3.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "ねじなし露出ボックス1コ用1方出 E19",
+          "product_code": "#DS70191K",
+          "score": 0.489524364
+        },
+        {
+          "master_id": 10002,
+          "product_name": "露出スイッチボックス1コ用1方出 16",
+          "product_code": "DF30161K",
+          "score": 0.488001376
+        },
+        {
+          "master_id": 10003,
+          "product_name": "ねじなし露出ボックス1コ用1方出 E25",
+          "product_code": "#DS70251K",
+          "score": 0.474503905
+        }
+      ],
+      "quantity": 3.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 59,
+      "mixed": "ｽｲｯﾁﾎﾞｯｸｽ 標準形1個用 | ",
+      "quantity": 3.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "埋込スイッチボックス1個用(塗代付)",
+          "product_code": "CSW1N",
+          "score": 0.594135284
+        },
+        {
+          "master_id": 10002,
+          "product_name": "露出BOX・E31角1方出",
+          "product_code": "NK3111S",
+          "score": 0.509965599
+        },
+        {
+          "master_id": 10003,
+          "product_name": "ねじなし露出ボックス1コ用1方出 E25",
+          "product_code": "#DS70251K",
+          "score": 0.505048096
+        }
+      ],
+      "quantity": 3.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 60,
+      "mixed": "LAN用ｹｰﾌﾞﾙ UTPｹｰﾌﾞﾙ0.5mm ｶﾃｺﾞﾘ-5 4P | ",
+      "quantity": 480.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "CAT5E 4P UTP LB(TK)",
+          "product_code": "NETSTARC5ELBTK",
+          "score": 0.777796626
+        },
+        {
+          "master_id": 10002,
+          "product_name": "LANケーブル 0.5×4P",
+          "product_code": "CAT5E.",
+          "score": 0.732517302
+        },
+        {
+          "master_id": 10003,
+          "product_name": "NSGDT 0.5X4P",
+          "product_code": "CAT6054P",
+          "score": 0.721023142
+        }
+      ],
+      "quantity": 480.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 61,
+      "mixed": "情報用ﾓｼﾞｭﾗｰｼﾞｬｯｸ ｶﾃｺﾞﾘ-5 1個用 | ",
+      "quantity": 2.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "5ケ用セーリスボックス",
+          "product_code": "SB5B",
+          "score": 0.586724341
+        },
+        {
+          "master_id": 10002,
+          "product_name": "埋込スイッチボックス5個用(塗代付)",
+          "product_code": "CSW5N",
+          "score": 0.546527207
+        },
+        {
+          "master_id": 10003,
+          "product_name": "1ケ用セーリスボックス",
+          "product_code": "SB1B",
+          "score": 0.542051613
+        }
+      ],
+      "quantity": 2.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 62,
+      "mixed": "高周波同軸ｹｰﾌﾞﾙ 3C-2V | ",
+      "quantity": 880.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "EM-IE2.0緑",
+          "product_code": "EMIE20G",
+          "score": 0.531051576
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600Vケーブル CV3.5X3C",
+          "product_code": "CV353",
+          "score": 0.528054714
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600Vケーブル CVVS2X3C",
+          "product_code": "CVVS23",
+          "score": 0.52479
+        }
+      ],
+      "quantity": 880.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 63,
+      "mixed": "LAN用ｹｰﾌﾞﾙ UTPｹｰﾌﾞﾙ0.5mm ｶﾃｺﾞﾘ-5 4P  管内 | ",
+      "quantity": 200.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "CAT5E 4P UTP LB(TK)",
+          "product_code": "NETSTARC5ELBTK",
+          "score": 0.690519094
+        },
+        {
+          "master_id": 10002,
+          "product_name": "LANケーブル 0.5×4P",
+          "product_code": "CAT5E.",
+          "score": 0.675596178
+        },
+        {
+          "master_id": 10003,
+          "product_name": "CAT5E 4P UTP LB(TK)",
+          "product_code": "NETSTARC5ELBTK",
+          "score": 0.675525784
+        }
+      ],
+      "quantity": 200.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 64,
+      "mixed": "波付硬質ﾎﾟﾘｴﾁﾚﾝ管(FEP) FEP-100  地中 | ",
+      "quantity": 50.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "ミラレックスF・本体 100φ",
+          "product_code": "FEP100",
+          "score": 0.914042234
+        },
+        {
+          "master_id": 10002,
+          "product_name": "ミラレックスF・本体 80φ",
+          "product_code": "FEP80",
+          "score": 0.880329549
+        },
+        {
+          "master_id": 10003,
+          "product_name": "タイレックス100φ 本体",
+          "product_code": "YFEP100",
+          "score": 0.86989975
+        }
+      ],
+      "quantity": 50.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 65,
+      "mixed": "波付硬質ﾎﾟﾘｴﾁﾚﾝ管(FEP) FEP-80  地中 | ",
+      "quantity": 5.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "ミラレックスF・本体 80φ",
+          "product_code": "FEP80",
+          "score": 0.924095631
+        },
+        {
+          "master_id": 10002,
+          "product_name": "ミラレックスF・本体 100φ",
+          "product_code": "FEP100",
+          "score": 0.889051
+        },
+        {
+          "master_id": 10003,
+          "product_name": "エフレックス本体FEP80Φ",
+          "product_code": "FP80",
+          "score": 0.88074851
+        }
+      ],
+      "quantity": 5.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 66,
+      "mixed": "波付硬質ﾎﾟﾘｴﾁﾚﾝ管(FEP) FEP-30  地中 | ",
+      "quantity": 275.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "ミラレックスF・本体 30φ",
+          "product_code": "FEP30",
+          "score": 0.913922608
+        },
+        {
+          "master_id": 10002,
+          "product_name": "タイレックス 30φ 本体",
+          "product_code": "YFEP30",
+          "score": 0.883526623
+        },
+        {
+          "master_id": 10003,
+          "product_name": "タイレックス 30φ 本体",
+          "product_code": "YFEP30",
+          "score": 0.876871526
+        }
+      ],
+      "quantity": 275.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 67,
+      "mixed": "直線接続材 30 FEP用 | ",
+      "quantity": 5.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "ミラレックスF用カップリング",
+          "product_code": "FEC30B",
+          "score": 0.977092385
+        },
+        {
+          "master_id": 10002,
+          "product_name": "直線接続材アクアフィット型30Φ",
+          "product_code": "FSA30",
+          "score": 0.944328368
+        },
+        {
+          "master_id": 10003,
+          "product_name": "直線接続材アクアフィット型40Φ",
+          "product_code": "FSA40",
+          "score": 0.902064085
+        }
+      ],
+      "quantity": 5.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 68,
+      "mixed": "埋設標識ｼｰﾄ 幅150mm 2倍 | ",
+      "quantity": 250.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "埋設シ-ト 低圧電力用 W=150 W",
+          "product_code": "NNDWL",
+          "score": 0.822885036
+        },
+        {
+          "master_id": 10002,
+          "product_name": "埋設 標識シート",
+          "product_code": "MHSDT",
+          "score": 0.759124279
+        },
+        {
+          "master_id": 10003,
+          "product_name": "埋設 標識シート",
+          "product_code": "MHSST",
+          "score": 0.712171555
+        }
+      ],
+      "quantity": 250.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 69,
+      "mixed": "地中埋設標 ｷｬﾂｱｲ  鉄製 | ",
+      "quantity": 6.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "接地埋設標 刻印",
+          "product_code": "3005",
+          "score": 0.697570205
+        },
+        {
+          "master_id": 10002,
+          "product_name": "接地埋設標示板",
+          "product_code": "8811",
+          "score": 0.682633519
+        },
+        {
+          "master_id": 10003,
+          "product_name": "国交省型埋設標 本体",
+          "product_code": "MHK300",
+          "score": 0.6127249
+        }
+      ],
+      "quantity": 6.0
+    }
+  }
+]

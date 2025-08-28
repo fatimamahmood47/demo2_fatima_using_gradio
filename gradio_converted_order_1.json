@@ -1,0 +1,242 @@
+[
+  {
+    "pre_convert": {
+      "id": 0,
+      "mixed": "三相6600/210V　500KVA　SOU-YDCR3 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600V IV線 60 スケア(緑)",
+          "product_code": "IV60G",
+          "score": 0.536240041
+        },
+        {
+          "master_id": 10002,
+          "product_name": "6k端末ハイーKタームCET38・60",
+          "product_code": "#92E732JNEM",
+          "score": 0.534502327
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600Vケーブル CV55X3C",
+          "product_code": "CV553",
+          "score": 0.53205061
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 1,
+      "mixed": "上記オプション　ダイヤル温度計　直付形 日立　SuperトップランナーⅡ変圧器 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "天井取付熱線センサ付自動スイッチ(親器・",
+          "product_code": "WTK24818",
+          "score": 0.496629685
+        },
+        {
+          "master_id": 10002,
+          "product_name": "天井取付熱線センサ付自動スイッチ(親器・",
+          "product_code": "WTK24818",
+          "score": 0.493041456
+        },
+        {
+          "master_id": 10003,
+          "product_name": "ア-ス付ショップライン本体 1m白",
+          "product_code": "#DH0211EK",
+          "score": 0.484166503
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 2,
+      "mixed": "単相6600/210-105V　100KVA　SOU-CR3 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "6k端末ハイーKタームCET38・60",
+          "product_code": "#92E732JNEM",
+          "score": 0.546076298
+        },
+        {
+          "master_id": 10002,
+          "product_name": "EMケーブルCET250X3C",
+          "product_code": "EMCET2503",
+          "score": 0.525904417
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600V IV線 60 スケア(緑)",
+          "product_code": "IV60G",
+          "score": 0.524693787
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 3,
+      "mixed": "ニチコン　高圧進相コンデンサ　3相7020V　160Kvar AF702161KAC1 日東工業　ニパボックス純正部品 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "接地2P30A横型キャップ",
+          "product_code": "WF56301W",
+          "score": 0.550846934
+        },
+        {
+          "master_id": 10002,
+          "product_name": "接地2P30A角型コンセント(薄形)",
+          "product_code": "WK36301W",
+          "score": 0.550801873
+        },
+        {
+          "master_id": 10003,
+          "product_name": "3P20A埋込コンセント・B",
+          "product_code": "WF1320BK",
+          "score": 0.546104789
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 4,
+      "mixed": "NCP-T8 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "EMケーブルCE8X3C",
+          "product_code": "EMCE83",
+          "score": 0.591725707
+        },
+        {
+          "master_id": 10002,
+          "product_name": "フルカラー取付枠",
+          "product_code": "#WN3700",
+          "score": 0.515828609
+        },
+        {
+          "master_id": 10003,
+          "product_name": "フルカラー新金属プレート1コ用",
+          "product_code": "#WN7501",
+          "score": 0.515828609
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 5,
+      "mixed": "NCP-T9 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "EMケーブルCE8X3C",
+          "product_code": "EMCE83",
+          "score": 0.498749942
+        },
+        {
+          "master_id": 10002,
+          "product_name": "T型(C)コネクター T-44",
+          "product_code": "T44K",
+          "score": 0.477464
+        },
+        {
+          "master_id": 10003,
+          "product_name": "埋込スイッチボックス3個用(塗代付)",
+          "product_code": "CSW3N",
+          "score": 0.466954261
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 6,
+      "mixed": "NCP-S8 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "EMケーブルCE8X3C",
+          "product_code": "EMCE83",
+          "score": 0.548515201
+        },
+        {
+          "master_id": 10002,
+          "product_name": "フルカラー新金属プレート1コ用",
+          "product_code": "#WN7501",
+          "score": 0.547949255
+        },
+        {
+          "master_id": 10003,
+          "product_name": "フルカラー取付枠",
+          "product_code": "#WN3700",
+          "score": 0.547949255
+        }
+      ],
+      "quantity": 1.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 7,
+      "mixed": "NCP-S9 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "埋込スイッチボックス3個用(塗代付)",
+          "product_code": "CSW3N",
+          "score": 0.477716297
+        },
+        {
+          "master_id": 10002,
+          "product_name": "通信線F-CPEV0.9X5P",
+          "product_code": "CPEV095P",
+          "score": 0.471717149
+        },
+        {
+          "master_id": 10003,
+          "product_name": "EMケーブルCE8X3C",
+          "product_code": "EMCE83",
+          "score": 0.46202141
+        }
+      ],
+      "quantity": 1.0
+    }
+  }
+]

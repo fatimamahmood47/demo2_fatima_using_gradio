@@ -1,0 +1,701 @@
+file name  - app/dependencies/llm.py
+code
+# app/dependencies/openai_client.py
+
+from openai import OpenAI
+from dotenv import load_dotenv
+import os
+
+# Load environment *once* at module level
+load_dotenv()
+
+# Fetch your secret *once*
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+# Optional: raise an error if it's missing
+if not OPENAI_API_KEY:
+    raise RuntimeError("OPENAI_API_KEY not found in environment")
+
+# Create and reuse a single client instance
+openai_client = OpenAI(api_key=OPENAI_API_KEY)
+
+
+def get_openai_client() -> OpenAI:
+    return openai_client
+
+
+----------------------------------------------------------------------
+
+file name  - app/dependencies/vector_database.py
+code
+# embeddings and vector database 
+from openai import OpenAI
+from pinecone import Pinecone 
+
+# data types 
+from typing import List
+
+# load api keys 
+from dotenv import load_dotenv
+import os
+
+# out
+import json
+
+# get api keys 
+load_dotenv()
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
+PINECONE_INDEX_NAME = os.getenv("PINECONE_INDEX_NAME")
+
+class QueryProductNames:
+    def __init__(self): 
+        self.openai_client = OpenAI(api_key=OPENAI_API_KEY)
+        self.pinecone_client = Pinecone(api_key=PINECONE_API_KEY)
+        self.index = self.pinecone_client.Index(PINECONE_INDEX_NAME) 
+
+    def _create_embeddings(self, external_product_name: str) -> List[float]:
+        set_dimension = 1536
+        response = self.openai_client.embeddings.create(
+            input=[external_product_name],
+            model="text-embedding-3-small",
+            dimensions = set_dimension 
+        )
+        return response.data[0].embedding
+
+    def _query_pinecone(self, vector: List[float] ) -> List[str]:
+        number_returns = 10 
+        result = self.index.query(
+            vector=vector,
+            top_k=number_returns, 
+            include_metadata=True
+        )
+        return result 
+    
+    def query_product_names(self, external_product_name :str ) -> List[str]: 
+        query_embedding = self._create_embeddings(external_product_name)
+        return self._query_pinecone(query_embedding)
+ 
+ 
+# # sample usage 
+# q_inst = QueryProductNames() 
+# result = q_inst.query_product_names("VE22硬質ビニル電線管(4m)ベージュ") 
+# print(result)
+
+----------------------------------------------------------------------
+
+file name  - app/dump_py_sources.py
+code
+#!/usr/bin/env python3
+"""
+Dump all .py files under a folder (default: ./app) in this format:
+
+file name  - app/path/to/file.py
+code
+<contents of file>
+
+----------------------------------------------------------------------
+
+Usage:
+  python dump_py_sources.py            # assumes ./app
+  python dump_py_sources.py app        # explicit root
+  python dump_py_sources.py app -o out.txt  # write to file
+
+Notes:
+- Skips common junk dirs: __pycache__, .git, venv/.venv, env, build, dist, caches
+- Tries several encodings (utf-8, utf-8-sig, cp932, latin-1)
+"""
+
+from pathlib import Path
+import argparse
+import sys
+
+SKIP_DIR_NAMES = {
+    "__pycache__", ".git", "venv", ".venv", "env", ".env",
+    "build", "dist", ".mypy_cache", ".pytest_cache", ".ruff_cache"
+}
+
+SEPARATOR = "\n\n----------------------------------------------------------------------\n\n"
+
+def readable_text(p: Path) -> str:
+    for enc in ("utf-8", "utf-8-sig", "cp932", "latin-1"):
+        try:
+            return p.read_text(encoding=enc)
+        except Exception:
+            continue
+    # Fallback: decode bytes with replacement to avoid crashing
+    return p.read_bytes().decode("utf-8", errors="replace")
+
+def iter_py_files(root: Path):
+    for path in root.rglob("*.py"):
+        # Skip files inside unwanted directories
+        if any(part in SKIP_DIR_NAMES for part in path.parts):
+            continue
+        yield path
+
+def dump_sources(root: Path, out_stream):
+    root = root.resolve()
+    base_label = root.name  # e.g., "app"
+
+    files = sorted(
+        (p for p in iter_py_files(root)),
+        key=lambda p: f"{base_label}/{p.relative_to(root).as_posix()}"
+    )
+
+    for i, p in enumerate(files):
+        rel = p.relative_to(root).as_posix()
+        labeled_path = f"{base_label}/{rel}"  # e.g., app/dependencies/vector_database.py
+        out_stream.write(f"file name  - {labeled_path}\n")
+        out_stream.write("code\n")
+        out_stream.write(readable_text(p))
+        if i != len(files) - 1:
+            out_stream.write(SEPARATOR)
+
+def main():
+    ap = argparse.ArgumentParser(description="Dump all .py files from a folder in a formatted, concatenated output.")
+    ap.add_argument("root", nargs="?", default="/home/aisl/okadahd-quotation-app-phase1-backen_fatima/app", help="Root folder to scan (default: app)")
+    ap.add_argument("-o", "--output", default="/home/aisl/okadahd-quotation-app-phase1-backen_fatima/app/all_py_sources.txt",  help="Write result to this file instead of stdout")
+    args = ap.parse_args()
+
+    root = Path(args.root)
+    if not root.exists() or not root.is_dir():
+        print(f"Error: '{root}' is not a folder.", file=sys.stderr)
+        sys.exit(1)
+
+    if args.output:
+        out_path = Path(args.output)
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        with out_path.open("w", encoding="utf-8") as f:
+            dump_sources(root, f)
+        print(f"Done. Wrote output to: {out_path}")
+    else:
+        dump_sources(root, sys.stdout)
+
+if __name__ == "__main__":
+    main()
+
+
+
+----------------------------------------------------------------------
+
+file name  - app/main.py
+code
+# app/main.py
+from fastapi import FastAPI
+from app.routers import raw_order
+from app.routers import normalized_order 
+
+app = FastAPI()
+app.include_router(raw_order.router)
+app.include_router(normalized_order.router)
+
+
+
+----------------------------------------------------------------------
+
+file name  - app/routers/normalized_order.py
+code
+# routers/normalized_order.py (MODIFIED)
+from fastapi import APIRouter
+from typing import List
+
+# programmer defined schema 
+from app.schemas.normalized_order import NormalizedOrder 
+from app.schemas.converted_order import ConvertedProduct
+
+# routers 
+from app.services.order_converter import ConvertProduct
+
+router = APIRouter(
+    prefix="/normalized_order",
+    tags=["normalized_order"]
+)
+
+@router.get("/")
+async def list_orders():
+    return {"message": "This endpoint receive normalize order and convert external product names to internal ones. along with internal product id"}
+
+@router.post("/convert_internal", response_model=List[ConvertedProduct])  # Changed response model
+async def upload_csv(normalized_order: NormalizedOrder): 
+    converter = ConvertProduct(normalized_order)
+    return converter.convert_single_order()  # This now returns a list directly
+
+----------------------------------------------------------------------
+
+file name  - app/routers/raw_order.py
+code
+from fastapi import APIRouter, UploadFile, File, HTTPException
+import json
+
+# services 
+from app.services.order_normalizer import NormalizeCsvOrder 
+from app.services.order_normalizer import NormalizePDFOrder 
+# common output structure 
+from app.schemas.normalized_order import NormalizedOrder
+# detection schema
+from app.schemas.detection import DetectionConfig
+
+router = APIRouter(
+    prefix="/raw_order",
+    tags=["raw_order"]
+)
+
+@router.get("/")
+async def list_orders():
+    return {"message": "Raw order endpoint. Use /csv or /pdf to upload files."}
+
+@router.post("/normalize_csv", response_model=NormalizedOrder)
+async def upload_csv(
+    file: UploadFile = File(..., description="CSV file to process"),
+    detection: UploadFile = File(..., description="Detection JSON configuration file")
+):
+    """
+    Upload a CSV file and detection JSON configuration.
+    The detection JSON should contain column mapping information.
+    """
+    # Read and parse detection JSON file
+    try:
+        detection_contents = await detection.read()
+        detection_json = detection_contents.decode('utf-8')
+        detection_dict = json.loads(detection_json)
+        detection_config = DetectionConfig(**detection_dict)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Invalid detection JSON file: {str(e)}")
+    
+    # Read CSV file and process
+    
+    try:
+        # contents = await file.read()
+        # normalizer = NormalizeCsvOrder(contents)
+        # converted_data = normalizer.convert_to_component_list()
+        # return converted_data 
+            # app/routers/raw_order.py (inside /normalize_csv)
+        contents = await file.read()
+        normalizer = NormalizeCsvOrder(contents, detection_config)  # pass detection_config
+        converted_data = normalizer.convert_to_component_list()
+        return converted_data
+
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error processing CSV: {str(e)}")
+
+@router.post("/normalize_pdf", response_model=NormalizedOrder) 
+async def upload_pdf(
+    file: UploadFile = File(..., description="PDF file to process"),
+    detection: UploadFile = File(..., description="Detection JSON configuration file")
+):
+    """
+    Upload a PDF file and detection JSON configuration.
+    The detection JSON should contain column mapping information.
+    """
+    # Read and parse detection JSON file
+    try:
+        detection_contents = await detection.read()
+        detection_json = detection_contents.decode('utf-8')
+        detection_dict = json.loads(detection_json)
+        detection_config = DetectionConfig(**detection_dict)
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Invalid detection JSON file: {str(e)}")
+    
+    # Read PDF file and process
+    try:
+        contents = await file.read() 
+        normalizer = NormalizePDFOrder(contents)
+        normalized_data = normalizer.convert_to_component_list()
+        return normalized_data
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error processing PDF: {str(e)}")
+
+----------------------------------------------------------------------
+
+file name  - app/schemas/converted_order.py
+code
+# schemas/normalized_order.py (MODIFIED)
+from pydantic import BaseModel
+from typing import List
+
+class ConstructionComponent(BaseModel):
+    external_product_name: str      # e.g., "ケーブル IV1.25sq 黄"
+    external_product_code: str      # e.g., "abc4123"
+    quantities: int                 # e.g., 2
+
+class NormalizedOrder(BaseModel):
+    components: List[ConstructionComponent]
+
+# schemas/converted_order.py (MODIFIED)
+from pydantic import BaseModel
+from typing import List
+from pydantic import Field
+
+class Candidate(BaseModel):
+    master_id: int
+    product_name: str = Field(alias="product-name")  # Handle hyphen in JSON
+    product_code: str = Field(alias="product-code")
+    score: float
+
+    class Config:
+        populate_by_name = True  # Allow both field names and aliases
+
+class PreConvert(BaseModel):
+    id: int
+    mixed: str
+    quantity: int
+
+class Converted(BaseModel):
+    candidates: List[Candidate]
+    quantity: int
+
+class ConvertedProduct(BaseModel):
+    pre_convert: PreConvert = Field(alias="pre-convert")  # Handle hyphen in JSON
+    converted: Converted
+
+    class Config:
+        populate_by_name = True  # Allow both field names and aliases
+
+class ConvertOrder(BaseModel):
+    records: List[ConvertedProduct]
+
+----------------------------------------------------------------------
+
+file name  - app/schemas/detection.py
+code
+from pydantic import BaseModel, model_validator
+from typing import List, Literal, Optional
+
+class MixedColumn(BaseModel):
+    type: Literal["concat", "single"]
+    cols: List[int]
+    sep: Optional[str] = None  # optional
+
+    @model_validator(mode="after")
+    def _default_sep(self):
+        # default empty separator for single; require for concat
+        if self.type == "single" and self.sep is None:
+            self.sep = ""
+        if self.type == "concat" and not self.sep:
+            raise ValueError("sep is required when type='concat'")
+        return self
+
+class DetectionConfig(BaseModel):
+    mixed: MixedColumn
+    quantity_col: int  # 0-based index
+
+
+----------------------------------------------------------------------
+
+file name  - app/schemas/normalized_order.py
+code
+# schemas/normalized_order.py (MODIFIED)
+from pydantic import BaseModel
+from typing import List
+
+class ConstructionComponent(BaseModel):
+    external_product_name: str      # e.g., "ケーブル IV1.25sq 黄"
+    external_product_code: str      # e.g., "abc4123"
+    quantities: int                 # e.g., 2
+
+class NormalizedOrder(BaseModel):
+    components: List[ConstructionComponent]
+
+# schemas/converted_order.py (MODIFIED)
+from pydantic import BaseModel
+from typing import List
+
+class Candidate(BaseModel):
+    master_id: int
+    product_name: str  # Note: using hyphen as shown in target JSON
+    product_code: str
+    score: float
+
+class PreConvert(BaseModel):
+    id: int
+    mixed: str
+    quantity: int
+
+class Converted(BaseModel):
+    candidates: List[Candidate]
+    quantity: int
+
+class ConvertedProduct(BaseModel):
+    pre_convert: PreConvert  # Note: using underscore as shown in target JSON
+    converted: Converted
+
+class ConvertOrder(BaseModel):
+    records: List[ConvertedProduct]  # This will be a list directly
+
+----------------------------------------------------------------------
+
+file name  - app/services/order_converter.py
+code
+# services/order_converter.py (MODIFIED)
+# schemas
+from app.schemas.normalized_order import NormalizedOrder 
+from app.schemas.converted_order import ConvertedProduct, ConvertOrder, Candidate, PreConvert, Converted
+
+# vector database  
+from app.dependencies.vector_database import QueryProductNames 
+# llm
+from app.dependencies.llm import get_openai_client 
+
+# json handling
+import json
+from typing import List 
+
+class ConvertProduct: 
+    def __init__(self, normalized_order: NormalizedOrder):
+        # assign 
+        self.product_list = normalized_order.components
+        self.client = get_openai_client() 
+        self.vdatabase = QueryProductNames()  
+
+    def _query_similar_products(self, product_name: str): 
+        pinecone_result = self.vdatabase.query_product_names(product_name) 
+        return pinecone_result 
+    
+    def _convert(self, product_name: str, product_code: str, similar_products: str) -> List[Candidate]:
+        prompt = (
+            "🎯 Task: Given a `target_product_name` and a list of top vector similarity matches, return multiple candidate matches "
+            "with their details. Input includes target name and a list of matches (each with external_product_name, "
+            "internal_product_name, internal_product_id, and score). "
+            "Rules: "
+            "1. Use ONLY the provided matches from the similarity search results "
+            "2. ALWAYS return at least 1-3 candidates, even if scores are low "
+            "3. Generate sequential master_id numbers starting from 10001 "
+            "4. Use the internal_product_name as 'product-name' and internal_product_id as 'product-code' "
+            "5. Keep the original similarity scores "
+            "6. If no good matches exist, still return the top available matches "
+            "Output JSON format: {\"candidates\": [{\"master_id\": 10001, \"product-name\": \"...\", \"product-code\": \"...\", \"score\": 0.96}, ...]}"
+        )
+
+        try:
+            response = self.client.chat.completions.create(
+                model="gpt-4o-2024-08-06",
+                messages=[
+                    {"role": "system", "content": prompt},
+                    {
+                        "role": "user",
+                        "content": f"Target product name: {product_name}\nTarget product code: {product_code}\n\nSimilarity matches:\n{similar_products}",
+                    },
+                ],
+                response_format={"type": "json_object"},
+                temperature=0.1  # Lower temperature for more consistent results
+            )
+            
+            # Parse the JSON response
+            result_json = json.loads(response.choices[0].message.content)
+            
+            # Handle different response formats
+            if 'candidates' in result_json:
+                candidates_data = result_json['candidates']
+            elif isinstance(result_json, list):
+                candidates_data = result_json
+            else:
+                # Fallback: try to find any array in the response
+                candidates_data = []
+                for key, value in result_json.items():
+                    if isinstance(value, list) and len(value) > 0:
+                        candidates_data = value
+                        break
+            
+            # Convert to Candidate objects
+            candidates = []
+            for i, candidate in enumerate(candidates_data):
+                try:
+                    # Handle different key formats
+                    master_id = candidate.get('master_id', 10001 + i)
+                    product_name_key = candidate.get('product-name') or candidate.get('product_name') or candidate.get('name', f"Unknown Product {i+1}")
+                    product_code_key = candidate.get('product-code') or candidate.get('product_code') or candidate.get('code', f"UNK{i+1}")
+                    score = float(candidate.get('score', 0.5))
+                    
+                    candidates.append(Candidate(
+                        master_id=master_id,
+                        product_name=product_name_key,
+                        product_code=product_code_key,
+                        score=score
+                    ))
+                except Exception as e:
+                    print(f"Error parsing candidate {i}: {e}")
+                    # Add a fallback candidate
+                    candidates.append(Candidate(
+                        master_id=10001 + i,
+                        product_name=f"Fallback Product {i+1}",
+                        product_code=f"FB{i+1}",
+                        score=0.1
+                    ))
+            
+            # Ensure we always return at least one candidate
+            if not candidates:
+                candidates.append(Candidate(
+                    master_id=10001,
+                    product_name="No Match Found",
+                    product_code="NOMATCH",
+                    score=0.0
+                ))
+            
+            return candidates
+            
+        except Exception as e:
+            print(f"Error in _convert method: {e}")
+            # Return a fallback candidate in case of complete failure
+            return [Candidate(
+                master_id=10001,
+                product_name="Error Processing",
+                product_code="ERROR",
+                score=0.0
+            )]
+
+    def _convert_single_product(self, single_product: dict, product_index: int) -> ConvertedProduct: 
+        # Extract data from the product
+        external_name = single_product.external_product_name
+        external_code = single_product.external_product_code
+        quantity = single_product.quantities
+        
+        # Get similar products
+        similar_products = str(self._query_similar_products(external_name))
+        
+        # Convert and get candidates
+        candidates = self._convert(external_name, external_code, similar_products)
+        
+
+
+            # --- DEBUG: print to terminal ---
+        print(f"\n[DEBUG] Product #{product_index}")
+        print(f"[DEBUG] external_name: {external_name}")
+        print(f"[DEBUG] external_code: {external_code}")
+        print(f"[DEBUG] similar_products: {similar_products}")
+        print("[DEBUG] candidates:")
+        for c in candidates:
+            try:
+                payload = c.model_dump() if hasattr(c, "model_dump") else (
+                        c.dict() if hasattr(c, "dict") else vars(c))
+            except Exception:
+                payload = str(c)
+            print("   ", payload)
+        # --- end DEBUG ---
+
+
+
+
+
+        # Create the new structure
+        pre_convert = PreConvert(
+            id=product_index,
+            mixed=f"{external_name} | {external_code}",
+            quantity=quantity
+        )
+        
+        converted = Converted(
+            candidates=candidates,
+            quantity=quantity
+        )
+        
+        return ConvertedProduct(
+            pre_convert=pre_convert,
+            converted=converted
+        )
+    
+    def convert_single_order(self):
+        converted_list = []
+        for index, product in enumerate(self.product_list):   
+            converted_list.append(self._convert_single_product(product, index))
+        
+        # Return as a list directly (not wrapped in ConvertOrder)
+        return converted_list
+
+----------------------------------------------------------------------
+
+file name  - app/services/order_normalizer.py
+code
+# services/order_normalizer.py (finalized for deterministic quantity handling)
+import pandas as pd
+from io import StringIO
+import json
+import re
+
+# output structure
+from app.schemas.normalized_order import NormalizedOrder, ConstructionComponent
+from app.schemas.detection import DetectionConfig
+
+
+class NormalizeCsvOrder:
+    def __init__(self, contents: bytes, detection_config: DetectionConfig):
+        """
+        Accepts raw CSV file content and detection JSON config.
+        Produces structured normalized data directly (no LLM for quantities).
+        """
+        self.detection_config = detection_config
+        self.df = self._parse_contents(contents)
+
+    def _parse_contents(self, contents: bytes) -> pd.DataFrame:
+        """
+        Decode CSV into pandas DataFrame.
+        """
+        try:
+            decoded = contents.decode("utf-8")
+        except UnicodeDecodeError:
+            decoded = contents.decode("shift-jis", errors="ignore")
+
+        df = pd.read_csv(
+            StringIO(decoded),
+            dtype=str,
+            keep_default_na=False,
+            na_values=["", "NA", "NaN"]
+        )
+        return df.fillna("")
+
+    def _extract_quantity(self, value: str) -> int:
+        """
+        Extract numeric part from quantity cell like '2巻' -> 2.
+        Defaults to 1 if no number is found.
+        """
+        if not value:
+            return 1
+        match = re.search(r"\d+", str(value))
+        return int(match.group()) if match else 1
+
+    def _extract_code(self, row: pd.Series) -> str:
+        """
+        Try to extract product code from known columns.
+        If not found, fallback to empty string.
+        """
+        for col in row.index:
+            if any(keyword in col.lower() for keyword in ["code", "品番", "型番", "商品コード"]):
+                if row[col].strip():
+                    return row[col].strip()
+        return ""  # fallback
+
+    def convert_to_component_list(self) -> NormalizedOrder:
+        """
+        Convert CSV rows into ConstructionComponent list
+        using detection JSON config.
+        """
+        components = []
+        mixed_cfg = self.detection_config.mixed
+        qty_col = self.detection_config.quantity_col
+
+        for _, row in self.df.iterrows():
+            # --- external_product_name ---
+            if mixed_cfg.type == "single":
+                external_name = str(row.iloc[mixed_cfg.cols[0]]).strip()
+            elif mixed_cfg.type == "concat":
+                parts = [str(row.iloc[c]).strip() for c in mixed_cfg.cols]
+                external_name = mixed_cfg.sep.join(parts)
+            else:
+                external_name = ""
+
+            # --- quantity (always from JSON column) ---
+            quantity = self._extract_quantity(row.iloc[qty_col])
+
+            # --- product_code (optional, best-effort) ---
+            external_code = self._extract_code(row)
+             # --- DEBUG PRINT ---
+            print(f"[DEBUG] Row {idx}: name='{external_name}', code='{external_code}', qty={quantity}")
+
+
+            # Build component
+            components.append(ConstructionComponent(
+                external_product_name=external_name,
+                external_product_code=external_code,
+                quantities=quantity
+            ))
+
+        return NormalizedOrder(components=components)
