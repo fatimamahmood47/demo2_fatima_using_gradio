@@ -138,6 +138,7 @@ class NormalizeCsvOrder:
                     continue
 
                 # Skip obvious notes / disclaimers / headers
+<<<<<<< HEAD
                             # Skip obvious notes / disclaimers / headers
                 if (external_name.startswith("※")
                     or any(keyword in external_name for keyword in ["名称", "規格", "数量", "単位", "金額", "備考"])):
@@ -151,6 +152,19 @@ class NormalizeCsvOrder:
                         current_name, current_quantity, current_code = None, None, None
                     continue
 
+=======
+                if (external_name.startswith("※")
+                    or any(keyword in external_name for keyword in ["名称", "規格", "数量", "単位", "金額", "備考"])):
+                    continue
+
+                # Look ahead: is this a group header? (next row has quantity)
+                next_qty = None
+                if idx + 1 < len(self.df):
+                    next_qty = self._extract_quantity(self.df.iloc[idx + 1, qty_col])
+                if next_qty and next_qty > 0:
+                    group_context = external_name
+                    continue
+>>>>>>> 052ef1b27b9a98155612271920865e406e74ae41
 
                 # Otherwise, treat as continuation (only if no blank before)
                 if current_name:
