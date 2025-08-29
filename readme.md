@@ -1,6 +1,8 @@
 <<<<<<< HEAD
 # About this repo 
-- implementation of phase 1, focused on backend 
+- implementation of phase 1, focused on backend
+  
+- # using gradio gui ,for running the gradio gui, please fellow below repo and explanation ,everything in below repo ,if you do not have enough time do not read from statrting ,just go through directly below repo and fellow those steps for running gradio gui.
 
 # Goal of Project 
 - we have two entities :
@@ -429,17 +431,15 @@ these operations does not impact the speed of overall conversion.
 - overall, 12k (internal+external) product names are pre ingested in serverless pinecone data. 
 =======
 │   └── vector_database.py          # inputs a single product name and returns similar product names along product ID
-├── routers/
-│   ├── normalized_order.py         # manages subendpoint /normalized_order
-│   └── raw_order.py                # manages subendpoint /raw_order
 ├── schemas/    
 │   ├── converted_order.py          # defines data model output for end point 3
 │   └── normalized_order.py         # defines data model output for endpoint 1 & 2
+  └── detection.py 
 ├── services/
 │   ├── order_converter.py          # receives normalized csv, convert each product name, then return internal quotation(final)
 │   └── order_normalizer.py         # receives a raw csv content in json, then LLM rearrange its content into predefined data fields.
 ├── main.py                         # includes all routers
-```
+├── gradio_app.py                         # to run this folder, please read carefully below repo
 
 ## Key Consideration
 ### Cost
@@ -461,7 +461,7 @@ these operations does not impact the speed of overall conversion.
 - At this point, we are confident that overall conversion is correct.
 
 ### [Key Suggestion]
-- by kouki
+- by kouki and fatima
 <<<<<<< HEAD
 - the key is to maintain all operations to be lightweight. This reduce cost, latency, quality. 
 - this includes 
@@ -470,7 +470,13 @@ these operations does not impact the speed of overall conversion.
     - If we're parsing data to LLM, try reduce the input token count. In contrast, if we're asking LLM to output, use structure output to reduce output token count. This reduce latency and cost.
     - try to use lightweight OCR, then parse to LLM to get the proper data structure. Heavy OCR is not required in our use case. pdfplumber OCR already did a good job.  Hosting heavy ocr will increase latency and cost. As long as overall text content are extracte and even its not well structure its enough, because LLM will structure the raw content. 
 
-# Using This Repo 
+# Using This Repo
+
+# Using This Repo
+
+example i took for running this repo is below csv file name.
+I took this from okahada notion with this heading *poc file used* and  csv file number is 04
+【見積】田崎医院新築工事　　電気設備.XLS.xlsx - PAGE(3) (3).csv
 
 only the back end is completed, front is in construction. 
 1. clone this repo 
@@ -496,9 +502,9 @@ only the back end is completed, front is in construction.
     Warning on OPENAI_API_KEY, if you get a quota limit issue. 
     I suggest try using a personal api key with some balance loaded. 
     the key provided from novatrade gives error.
-6. point to root directory write command to start fast api locally 
-    ``` 
-    uvicorn app.main:app --reload
+6. 6. point to root directory write command to start gradio gui locally
+    ```
+    python3 gradio_app.py
     ``` 
 7. open in browser to use endpoints 
     ``` 
@@ -536,24 +542,29 @@ only the back end is completed, front is in construction.
     Warning on OPENAI_API_KEY, if you get a quota limit issue.
     I suggest try using a personal api key with some balance loaded.
     the key provided from novatrade gives error.
-6. point to root directory write command to start fast api locally
+6. 6. point to root directory write command to start gradio gui locally
     ```
-    uvicorn app.main:app --reload
-    
+    python3 gradio_app.py
+    ``` 
+the below ,is used when we run in the backed fasiapi-port for integration of demo1 ,demo2 and demo3 
+note: ignore this line "uvicorn app.main:app --reload --port 8000" , for running the gradio gui 
     ```uvicorn app.main:app --reload --port 8000
 
 7. open in browser to use endpoints
     ```
->>>>>>> 052ef1b27b9a98155612271920865e406e74ae41
-    INFO:     Uvicorn running on http://127.0.0.1:8000 (Press CTRL+C to quit)
-    INFO:     Started reloader process [52698] using WatchFiles
-    INFO:     Started server process [52701]
+  ```
+    INFO:     Uvicorn running on http://0.0.0.0:7860/ (Press CTRL+C to quit)
+    INFO:     upload the csv given file in example or any csv file 
+    
+    INFO:     there is a option with this name "by defult example" than you choose according to your detection coloum.json file which should be same of your csv file chooesed 
+    note: different csv file have different coloum detection.json file , before you run the code ,you should adjust coloum detection.json file inside the code by name "gradio_app.by" according to different csv file you choosed from this "okahada notion with this heading *poc file used*"
+    
     INFO:     Waiting for application startup.
-<<<<<<< HEAD
+    ```
     ``` 
 
-    your end point + /docs 
-    e.g. http://127.0.0.1:8000/docs 
+      your end point 
+    e.g. http://0.0.0.0:7860/
 
 to test out some data
 - sampledata/sample_input.csv to /raw_order/normalize_csv  # quite short 
@@ -562,8 +573,8 @@ to test out some data
 =======
     ```
 
-    your end point + /docs
-    e.g. http://127.0.0.1:8000/docs
+    your end point 
+    e.g. http://0.0.0.0:7860/
 
 to test out some data
 - sampledata/sample_input.csv to /raw_order/normalize_csv  # quite short
