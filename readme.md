@@ -13,7 +13,8 @@
     - pdf 
     - csv
 - within each order, construction companies will write the components in their own language 
-    - example : 
+    - example :
+      
         ``` 
 =======
 # About this repo
@@ -470,9 +471,284 @@ these operations does not impact the speed of overall conversion.
     - If we're parsing data to LLM, try reduce the input token count. In contrast, if we're asking LLM to output, use structure output to reduce output token count. This reduce latency and cost.
     - try to use lightweight OCR, then parse to LLM to get the proper data structure. Heavy OCR is not required in our use case. pdfplumber OCR already did a good job.  Hosting heavy ocr will increase latency and cost. As long as overall text content are extracte and even its not well structure its enough, because LLM will structure the raw content. 
 
-# Using This Repo
+# Using This Repo Demo2 Product Code Conversion
 
 # Using This Repo
+Example 
+I used this example csv_file_number = 04
+
+  内訳明細  					
+引込・幹線設備					
+					
+中項目		数　量	単位	単　価	金　額
+電線 IV　5.5sq		20	ｍ		
+電線 IV　22sq		6	ｍ		
+ｹｰﾌﾞﾙ CVT 14sq		16	ｍ		
+ｹｰﾌﾞﾙ CVT 22sq		24	ｍ		
+ｹｰﾌﾞﾙ CVT 60sq		10	ｍ		
+ｹｰﾌﾞﾙ S-5C-FB		16	ｍ		
+ｹｰﾌﾞﾙ Cat-6e		16	ｍ		
+ｹｰﾌﾞﾙ支持材		1	式
+
+Coloum Detection.json file 
+
+{
+  "mixed": {
+    "type": "single",
+    "cols": [
+      0
+    ]
+  },
+  "quantity_col": 2
+}
+
+Result
+
+[
+  {
+    "pre_convert": {
+      "id": 0,
+      "mixed": "電線 IV　5.5sq | ",
+      "quantity": 20.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600V IV線 5.5 スケア(緑)",
+          "product_code": "IV55G",
+          "score": 0.947449565
+        },
+        {
+          "master_id": 10002,
+          "product_name": "IV5.5緑",
+          "product_code": "IV55G",
+          "score": 0.947449565
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600V IV線 3.5 スケア(緑)",
+          "product_code": "IV35G",
+          "score": 0.914137065
+        }
+      ],
+      "quantity": 20.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 1,
+      "mixed": "電線 IV　22sq | ",
+      "quantity": 6.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600V IV線 22 スケア(緑)",
+          "product_code": "IV22G",
+          "score": 0.955990136
+        },
+        {
+          "master_id": 10002,
+          "product_name": "IV22緑",
+          "product_code": "IV22G",
+          "score": 0.955990136
+        },
+        {
+          "master_id": 10003,
+          "product_name": "IV2緑",
+          "product_code": "IV2G",
+          "score": 0.895632267
+        }
+      ],
+      "quantity": 6.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 2,
+      "mixed": "ｹｰﾌﾞﾙ CVT 14sq | ",
+      "quantity": 16.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600V CVT 14SQ",
+          "product_code": "CVT14",
+          "score": 0.711268127
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600Vケーブル CVT14X3C",
+          "product_code": "CVT14",
+          "score": 0.711268127
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600Vケーブル CVT14X3C",
+          "product_code": "CVT14",
+          "score": 0.693278909
+        }
+      ],
+      "quantity": 16.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 3,
+      "mixed": "ｹｰﾌﾞﾙ CVT 22sq | ",
+      "quantity": 24.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600Vケーブル CVT22X3C",
+          "product_code": "CVT22",
+          "score": 0.707579911
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600V CVT 22SQ",
+          "product_code": "CVT22",
+          "score": 0.707579911
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600Vケーブル CVT22X3C",
+          "product_code": "CVT22",
+          "score": 0.696906745
+        }
+      ],
+      "quantity": 24.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 4,
+      "mixed": "ｹｰﾌﾞﾙ CVT 60sq | ",
+      "quantity": 10.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "600Vケーブル CVT60×3C",
+          "product_code": "CVT60",
+          "score": 0.705063403
+        },
+        {
+          "master_id": 10002,
+          "product_name": "600V CVT 60SQ",
+          "product_code": "CVT60",
+          "score": 0.704820752
+        },
+        {
+          "master_id": 10003,
+          "product_name": "600Vケーブル CVT60×3C",
+          "product_code": "CVT60",
+          "score": 0.686632216
+        }
+      ],
+      "quantity": 10.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 5,
+      "mixed": "ｹｰﾌﾞﾙ S-5C-FB | ",
+      "quantity": 16.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "同軸ケーブル S5C-FBグレー",
+          "product_code": "S5CFBGY.",
+          "score": 0.669290185
+        },
+        {
+          "master_id": 10002,
+          "product_name": "同軸ケーブル S5CーFB 灰",
+          "product_code": "S5CFB",
+          "score": 0.669290185
+        },
+        {
+          "master_id": 10003,
+          "product_name": "同軸ケーブルS5CFB 灰 箱入り",
+          "product_code": "S5CFBGB",
+          "score": 0.653070509
+        }
+      ],
+      "quantity": 16.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 6,
+      "mixed": "ｹｰﾌﾞﾙ Cat-6e | ",
+      "quantity": 16.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "CAT5E 4P UTP LB(TK)",
+          "product_code": "NETSTARC5ELBTK",
+          "score": 0.669319034
+        },
+        {
+          "master_id": 10002,
+          "product_name": "NSGDT 0.5X4P",
+          "product_code": "CAT6054P",
+          "score": 0.653598249
+        },
+        {
+          "master_id": 10003,
+          "product_name": "フルカラー新金属プレート1コ用",
+          "product_code": "WN7501",
+          "score": 0.637252688
+        }
+      ],
+      "quantity": 16.0
+    }
+  },
+  {
+    "pre_convert": {
+      "id": 7,
+      "mixed": "ｹｰﾌﾞﾙ支持材 | ",
+      "quantity": 1.0
+    },
+    "converted": {
+      "candidates": [
+        {
+          "master_id": 10001,
+          "product_name": "自在バンド(最大370φ)",
+          "product_code": "IBT212",
+          "score": 0.507950127
+        },
+        {
+          "master_id": 10002,
+          "product_name": "ステンレスチャンネル デーワンブロック",
+          "product_code": "SMKB5010",
+          "score": 0.503897488
+        },
+        {
+          "master_id": 10003,
+          "product_name": "MF管16用クリップ(エコノミー)",
+          "product_code": "MF16KE",
+          "score": 0.497414649
+        }
+      ],
+      "quantity": 1.0
+    }
+  }
+]
+
+
+
 
 example i took for running this repo is below csv file name.
 I took this from okahada notion with this heading *poc file used* and  csv file number is 04
